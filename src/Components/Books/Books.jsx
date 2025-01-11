@@ -1,4 +1,11 @@
+/* 1. state to store the books
+2. useEffects
+2.1 fetch to load data 
+2.2 set the data to the books state */
+
+
 import { useEffect, useState } from "react";
+import Book from "../Book/Book";
 
 
 const Books = () => {
@@ -14,8 +21,13 @@ useEffect( () => {
 },[])
 
     return (
-        <div>
-            <h2 className="text-4xl font-bold text-center">Books : {books.length}</h2>
+        <div >
+        <h2 className="text-4xl font-bold text-center">Books : {books.length}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {
+                    books.map(book => <Book book ={book} key={book.bookId} ></Book> )
+                }
+            </div>
             
         </div>
     );
@@ -23,7 +35,3 @@ useEffect( () => {
 
 export default Books;
 
-//1. state to store the books
-//2. useEffects
-//2.1 fetch to load data 
-//2.2 set the data to the books state
