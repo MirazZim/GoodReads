@@ -6,7 +6,7 @@ import NavBar from "../NavBar/NavBar";
 const Root = () => {
     return (
         //for width 1152px
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
             {/* Egula Fix Thakbe */}
             <NavBar></NavBar>
             

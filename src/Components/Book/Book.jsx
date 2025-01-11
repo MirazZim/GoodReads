@@ -19,7 +19,7 @@ const Book = ({ book }) => {
 
   return (
     <div className="card bg-base-100 w-96 shadow-xl p-6">
-      <figure className="bg-gray-400 py-8 rounded-2xl">
+      <figure className="bg-gray-100 py-8 rounded-2xl">
         <img
           src={image}
           className="h-[166px]"
