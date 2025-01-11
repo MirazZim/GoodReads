@@ -1,6 +1,7 @@
-const Book = ({ book }) => {
+import { Link } from "react-router-dom";
 
-    /* Destructuring and taking names from json like
+const Book = ({ book }) => {
+  /* Destructuring and taking names from json like
     1."bookId": 1,
     "bookName": "The Great Gatsby",
     "author": "F. Scott Fitzgerald",
@@ -15,29 +16,69 @@ const Book = ({ book }) => {
 
     as we can see in the json file theres props named image,bookName etc so we destructred them
      */
-  const { image, bookName, author } = book;
+  const { bookId, image, bookName, author, tags, category } = book;
 
   return (
-    <div className="card bg-base-100 w-96 shadow-xl p-6">
+
+    /* ekhane Link er dynamic route disi Book Id er */
+    <Link to = {`/books/${bookId}`}>
+
+
+        <div className="card bg-base-100 w-96 shadow-xl p-6">
       <figure className="bg-gray-100 py-8 rounded-2xl">
-        <img
-          src={image}
-          className="h-[166px]"
-          alt={bookName}
-        />
+        <img src={image} className="h-[166px]" alt={bookName} />
       </figure>
+
       <div className="card-body">
+        <div className="flex justify-center gap-4">
+          {tags.map((tag) => (
+            <button className="btn glass text-white">{tag}</button>
+          ))}
+        </div>
+            <br />
         <h2 className="card-title">
           {bookName}
           <div className="badge badge-secondary">NEW</div>
         </h2>
         <p>By : {author}</p>
-        <div className="card-actions justify-end">
-          <div className="badge badge-outline">Fashion</div>
-          <div className="badge badge-outline">Products</div>
+        <div className="divider"></div>
+
+        <div className="card-actions justify-between">
+          <div className="badge badge-outline">{category}</div>
+          
+            <div className="rating">
+              <input
+                type="radio"
+                name="rating-4"
+                className="mask mask-star-2 bg-green-500"
+              />
+              <input
+                type="radio"
+                name="rating-4"
+                className="mask mask-star-2 bg-green-500"
+                defaultChecked
+              />
+              <input
+                type="radio"
+                name="rating-4"
+                className="mask mask-star-2 bg-green-500"
+              />
+              <input
+                type="radio"
+                name="rating-4"
+                className="mask mask-star-2 bg-green-500"
+              />
+              <input
+                type="radio"
+                name="rating-4"
+                className="mask mask-star-2 bg-green-500"
+              />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
+    
   );
 };
 
