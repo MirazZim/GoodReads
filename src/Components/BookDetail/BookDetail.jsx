@@ -1,4 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { addToStoredReadList } from "../../utility/addToDb";
+import { addToStoredWishList } from "../../utility/addToDb2";
 
 const BookDetail = () => {
   const { bookId } = useParams();
@@ -10,6 +12,14 @@ const BookDetail = () => {
 
   if (!book) {
     return <p>Book not found</p>;
+  }
+
+  const handleMarkAsRead = (id) => {
+    addToStoredReadList(id);
+  
+}
+  const handleWishList = (id) => {
+    addToStoredWishList(id);
   }
 
   const {
@@ -96,10 +106,11 @@ const BookDetail = () => {
           </div>
           <div className="divider divider-neutral"></div>
           <div className="mt-4 flex gap-4">
-            <button className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition duration-200">
+            <button onClick={() => handleMarkAsRead(bookId)} className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition duration-200">
               Mark as Read
             </button>
-            <button className="px-4 py-2 bg-pink-500 text-white rounded-lg shadow hover:bg-pink-600 transition duration-200">
+            <button onClick={() => handleWishList(bookId)}
+             className="px-4 py-2 bg-pink-500 text-white rounded-lg shadow hover:bg-pink-600 transition duration-200">
              Add to Wishlist
             </button>
           </div>
