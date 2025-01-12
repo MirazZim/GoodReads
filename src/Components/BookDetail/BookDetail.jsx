@@ -97,10 +97,10 @@ const BookDetail = () => {
           <div className="divider divider-neutral"></div>
           <div className="mt-4 flex gap-4">
             <button className="px-4 py-2 bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition duration-200">
-              Read
+              Mark as Read
             </button>
             <button className="px-4 py-2 bg-pink-500 text-white rounded-lg shadow hover:bg-pink-600 transition duration-200">
-              Wishlist
+             Add to Wishlist
             </button>
           </div>
         </div>
