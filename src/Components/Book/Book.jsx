@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Book = ({ book }) => {
+const Book = ({ book, variant }) => {
   /* Destructuring and taking names from json like
     1."bookId": 1,
     "bookName": "The Great Gatsby",
