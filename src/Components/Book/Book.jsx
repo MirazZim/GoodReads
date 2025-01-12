@@ -20,27 +20,35 @@ const Book = ({ book }) => {
 
   return (
 
-    /* ekhane Link er dynamic route disi Book Id er */
-    <Link to = {`/books/${bookId}`}>
-
-
-        <div className="card bg-base-100 w-96 shadow-xl p-6">
+    
+    
+    <div className="card bg-base-100 w-96 shadow-xl p-6">
+          
+{/* //ekhane Link er dynamic route disi karon book er chobi te click korle jate oi Book Id er details ey jai */}
+          
+        <Link to = {`/books/${bookId}`}>
       <figure className="bg-gray-100 py-8 rounded-2xl">
         <img src={image} className="h-[166px]" alt={bookName} />
       </figure>
+      
+      </Link>
+        
+        
 
       <div className="card-body">
         <div className="flex justify-center gap-4">
-          {tags.map((tag) => (
-            <button className="btn glass text-white">{tag}</button>
+          {tags.map((tag, index) => (
+            <button key={index} className="btn glass text-white">{tag}</button>
           ))}
         </div>
+        
             <br />
         <h2 className="card-title">
           {bookName}
           <div className="badge badge-secondary">NEW</div>
         </h2>
         <p>By : {author}</p>
+        
         <div className="divider"></div>
 
         <div className="card-actions justify-between">
@@ -77,7 +85,6 @@ const Book = ({ book }) => {
           </div>
         </div>
       </div>
-    </Link>
     
   );
 };
