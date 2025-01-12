@@ -5,7 +5,7 @@ import Books from "../Books/Books";
 
 const Home = () => {
     return (
-        <div>
+        <div className="">
             
             <Banner></Banner>
             <Books></Books>

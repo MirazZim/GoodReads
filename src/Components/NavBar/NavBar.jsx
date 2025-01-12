@@ -4,11 +4,11 @@ const NavBar = () => {
 
     const links = <>
     {/* this is how we can link to navBar */}
-        <li> <NavLink to = "/" >Home</NavLink></li>
-        <li><a>Listed Books</a></li>
+        <li className="text-black font-bold"> <NavLink to = "/" >Home</NavLink></li>
+        <li className="text-black font-bold"><a>Listed Books</a></li>
     </>
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar shadow-lg">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -35,7 +35,7 @@ const NavBar = () => {
 
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">GoodReads</a>
+        <a className=" text-black btn btn-ghost text-2xl">GoodReads</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -45,7 +45,7 @@ const NavBar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <a className=" text-black btn btn-ghost text-l outline">Button</a>
       </div>
     </div>
   );

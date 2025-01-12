@@ -15,16 +15,18 @@ const Book = ({ book }) => {
     "yearOfPublishing": 1925
 
     as we can see in the json file theres props named image,bookName etc so we destructred them
-     */
-  const { bookId, image, bookName, author, tags, category } = book;
-
-  return (
-
-    
-    
-    <div className="card bg-base-100 w-96 shadow-xl p-6">
+    */
+   
+   
+   const { bookId, image, bookName, author, tags, category } = book;
+   
+   return (
+     
+     
+     
+    <div className="card bg-neutral-300 w-96 shadow-xl p-6">
           
-{/* //ekhane Link er dynamic route disi karon book er chobi te click korle jate oi Book Id er details ey jai */}
+     {/* //ekhane Link er dynamic route disi karon book er chobi te click korle jate oi Book Id er details ey jai */}
           
         <Link to = {`/books/${bookId}`}>
       <figure className="bg-gray-100 py-8 rounded-2xl">
@@ -38,48 +40,48 @@ const Book = ({ book }) => {
       <div className="card-body">
         <div className="flex justify-center gap-4">
           {tags.map((tag, index) => (
-            <button key={index} className="btn glass text-white">{tag}</button>
+            <button key={index} className="btn glass  text-black">{tag}</button>
           ))}
         </div>
         
             <br />
-        <h2 className="card-title">
+        <h2 className="card-title text-black">
           {bookName}
-          <div className="badge badge-secondary">NEW</div>
+          <div className="badge badge-secondary text-black">NEW</div>
         </h2>
-        <p>By : {author}</p>
+        <p className="text-black">By : {author}</p>
         
-        <div className="divider"></div>
+        <div className="divider divider-neutral"></div>
 
         <div className="card-actions justify-between">
-          <div className="badge badge-outline">{category}</div>
+          <div className="badge badge-outline text-black">{category}</div>
           
             <div className="rating">
               <input
                 type="radio"
                 name="rating-4"
-                className="mask mask-star-2 bg-green-500"
+                className="mask mask-star-2 bg-black"
               />
               <input
                 type="radio"
                 name="rating-4"
-                className="mask mask-star-2 bg-green-500"
+                className="mask mask-star-2 bg-black"
                 defaultChecked
               />
               <input
                 type="radio"
                 name="rating-4"
-                className="mask mask-star-2 bg-green-500"
+                className="mask mask-star-2 bg-black"
               />
               <input
                 type="radio"
                 name="rating-4"
-                className="mask mask-star-2 bg-green-500"
+                className="mask mask-star-2 bg-black"
               />
               <input
                 type="radio"
                 name="rating-4"
-                className="mask mask-star-2 bg-green-500"
+                className="mask mask-star-2 bg-black"
               />
             </div>
           </div>
