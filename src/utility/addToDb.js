@@ -23,4 +23,4 @@
 
  }
 
- export { addToStoredReadList }
+ export { addToStoredReadList, getStoredReadList }
