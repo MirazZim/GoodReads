@@ -2,11 +2,12 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
 
-    const links = <>
+  const links = <>
     {/* this is how we can link to navBar */}
-        <li className="text-black font-bold"> <NavLink to = "/" >Home</NavLink></li>
-        <li className="text-black font-bold"><a>Listed Books</a></li>
-    </>
+    <li className="text-black font-bold"> <NavLink to="/" >Home</NavLink></li>
+    <li className="text-black font-bold"> <NavLink to="/listedBooks" >Listed Books</NavLink></li>
+    
+  </>
   return (
     <div className="navbar shadow-lg">
       <div className="navbar-start">
@@ -40,7 +41,7 @@ const NavBar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
 
-            {links}
+          {links}
 
         </ul>
       </div>

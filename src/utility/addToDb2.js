@@ -1,9 +1,9 @@
 const getStoredWishList = () => {
     //Wish list
-    const storedWishString = localStorage.getItem('Wish-list')
-    if (storedWishString){
-        const storedWish = JSON.parse(storedWishString);
-        return storedWish;
+    const storedWishListString = localStorage.getItem('Wish-list')
+    if (storedWishListString){
+        const storedWishList = JSON.parse(storedWishListString);
+        return storedWishList;
     } else {
         return  [];
     }
@@ -12,13 +12,13 @@ const getStoredWishList = () => {
 
 
 const addToStoredWishList = (id) => {
-const storedWish = getStoredWishList();
-if(storedWish.includes(id)){
+const storedWishList = getStoredWishList();
+if(storedWishList.includes(id)){
     console.log(id, 'Already exists in the Wish list')
 } else {
-    storedWish.push(id);
-    const storedWishString = JSON.stringify(storedWish);
-    localStorage.setItem('Wish-list', storedWishString);
+    storedWishList.push(id);
+    const storedWishListString = JSON.stringify(storedWishList);
+    localStorage.setItem('Wish-list', storedWishListString);
 }
 
 }
