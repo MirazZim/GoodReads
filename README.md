@@ -1,4 +1,4 @@
-# GoodReads - A Modern Book Management and Discovery Platform 📚
+# GoodReads 📚
 
 Welcome to **GoodReads**, a modern and interactive web application designed to simplify book management and enhance the reading experience. With a sleek design, responsive layouts, and robust functionality, this platform helps readers track their reading lists, discover new books, and manage their book collections with ease.
 
