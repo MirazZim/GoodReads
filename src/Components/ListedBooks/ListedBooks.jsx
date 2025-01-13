@@ -41,7 +41,7 @@ const ListedBooks = () => {
         </TabList>
 
         <TabPanel>
-          <h2 className="text-2xl font-semibold mb-4">
+          <h2 className="text-2xl text-black font-bold mb-4">
             Books I Read: {readList.length}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -52,7 +52,7 @@ const ListedBooks = () => {
         </TabPanel>
 
         <TabPanel>
-          <h2 className="text-2xl font-semibold mb-4">
+          <h2 className="text-2xl text-black font-bold mb-4">
             Books I Wish to Read: {readList.length}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
