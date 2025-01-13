@@ -18,7 +18,7 @@ const Book = ({ book, variant }) => {
     */
    
    
-   const { bookId, image, bookName, author, tags, category } = book;
+   const { bookId, image, bookName, author, tags, category , rating , totalPages , yearOfPublishing} = book;
    
    return (
      
@@ -55,7 +55,9 @@ const Book = ({ book, variant }) => {
 
         <div className="card-actions justify-between">
           <div className="badge badge-outline text-black">{category}</div>
-          
+            <div className="badge badge-outline text-black">Pages: {totalPages}</div>
+            <div className="badge badge-outline text-black">{rating}</div>
+            <div className="badge badge-outline text-black">Published: {yearOfPublishing}</div>
             <div className="rating">
               <input
                 type="radio"
