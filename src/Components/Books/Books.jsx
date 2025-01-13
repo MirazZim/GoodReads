@@ -33,12 +33,13 @@ const Books = () => {
 
     return (
         <div>
+            {/* <div className="divider"></div> */}
             <h2 className="text-4xl font-bold text-center text-black">Books</h2>
-            <br />
+            <div className="divider divider-neutral"></div>
             <div className="flex items-center justify-end">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn m-1 ">
-                        {sort ? `Sort by: ${sort}` : "Sort By"}
+                        {sort ? `Sort by: ${sort}` : "Sort By "}
                     </div>
                     <ul
                         tabIndex={0}
@@ -62,6 +63,7 @@ const Books = () => {
                     <Book book={book} key={book.bookId}></Book>
                 ))}
             </div>
+            <br />
         </div>
     );
 };
