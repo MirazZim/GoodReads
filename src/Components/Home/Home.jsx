@@ -4,7 +4,9 @@ import Books from "../Books/Books";
 
 
 const Home = () => {
+    document.title = "GoodReads";
     return (
+        
         <div className="">
             
             <Banner></Banner>
